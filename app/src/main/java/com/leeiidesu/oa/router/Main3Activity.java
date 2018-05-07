@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.leeiidesu.oa.router.manager.RouterService;
 
 @Route(path = RouterService.Host.PATH_MAIN2)
 public class Main3Activity extends AppCompatActivity

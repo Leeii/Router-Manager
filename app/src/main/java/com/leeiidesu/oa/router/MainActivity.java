@@ -8,10 +8,11 @@ import android.widget.Toast;
 
 import com.leeiidesu.lib.core.android.Logger;
 import com.leeiidesu.lib.router.DRouter;
+import com.leeiidesu.oa.router.manager.RouterManager;
+import com.leeiidesu.oa.router.manager.RouterService;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RouterService routerService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        routerService = new DRouter().create(RouterService.class);
     }
 
     public void toMain2(View view) {
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toMain3(View view) {
-        routerService.routerToMain3("liyi");
+        RouterManager.getService().routerToMain3("liyi");
     }
 
     @Override
